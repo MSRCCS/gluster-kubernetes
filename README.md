@@ -3,7 +3,7 @@
 ## Hyper-converged GlusterFS + heketi on Kubernetes
 
 **gluster-kubernetes** is a project to provide Kubernetes administrators a
-mechanism to easily deploy a hyper-converged GlusterFS cluster along with with
+mechanism to easily deploy a hyper-converged GlusterFS cluster along with
 heketi onto an existing Kubernetes cluster. This is a convenient way to unlock
 the power of dynamically provisioned, persistent GlusterFS volumes in
 Kubernetes.
@@ -15,7 +15,9 @@ Kubernetes.
 * **[heketi](https://github.com/heketi/heketi)**, the RESTful volume management
   interface for GlusterFS.
 
-### Demo
+### Presentations
+
+You can find slides and videos of community presentations [here](docs/presentations).
 
 **>>> [Video demo of the technology!](https://drive.google.com/file/d/0B667S2caJiy7QVpzVVFNQVdyaVE/view?usp=sharing) <<<**
 
@@ -66,11 +68,6 @@ $ vagrant ssh master
 The following commands are meant to be run with administrative privileges
 (e.g. `sudo su` beforehand).
 
-For ease of use in the the vagrant setup, we recommend you run the following:
-
-```bash
-$ export KUBECONFIG="/etc/kubernetes/admin.conf"
-```
 At this point, verify the Kubernetes installation by making sure all nodes are
 Ready:
 
@@ -86,12 +83,6 @@ node2     Ready     22h
 ***NOTE***: To see the version of Kubernetes (which will change based on
 latest official releases) simply do `kubectl version`. This will help in
 troubleshooting.
-
-For ease of use in the the vagrant setup, we recommend you run the following:
-
-```bash
-$ export KUBECONFIG="/etc/kubernetes/admin.conf"
-```
 
 Next, to deploy heketi and GlusterFS, run the following:
 
